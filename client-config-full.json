@@ -1,5 +1,5 @@
 {
-    "defaultPool": "USDC-op-tenderly",
+    "defaultPool": "USDC-optimism",
 
     "pools": {
         "USDC-polygon": {
@@ -19,10 +19,11 @@
             "parameters": "prod",
             "poolAddress": "0x1CA8C2B9B20E18e86d5b9a72370fC6c91814c97C",
             "tokenAddress": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
-            "relayerUrls": ["https://relayer-optimism.zkbob.com/"],
+            "proxyUrls": ["https://proxy1.zkbob.com", "https://proxy2.zkbob.com"],
+            "delegatedProverUrls": [],
+            "coldStorageConfigPath": "",
             "feeDecimals": 2,
-            "depositScheme": "usdc",
-            "ddSubgraph": "zkbob-bob-optimism"
+            "depositScheme": "usdc"
         },
         "WETH-optimism": {
             "chainId": 10,
@@ -34,17 +35,6 @@
             "minTxAmount": 0,
             "depositScheme": "permit2",
             "ddSubgraph": "zkbob-eth-optimism"
-        },
-        "USDC-op-tenderly": {
-            "chainId": 10,
-            "parameters": "prod",
-            "poolAddress": "0x1CA8C2B9B20E18e86d5b9a72370fC6c91814c97C",
-            "tokenAddress": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
-            "proxyUrls": ["https://proxy1.zkbob.com", "https://proxy2.zkbob.com"],
-            "delegatedProverUrls": [],
-            "coldStorageConfigPath": "",
-            "feeDecimals": 2,
-            "depositScheme": "usdc"
         },
         "BOB-sepolia": {
             "chainId": 11155111,
@@ -150,7 +140,7 @@
             "rpcUrls": ["https://polygon-rpc.com", "https://rpc.ankr.com/polygon"]
         },
         "10": {
-            "rpcUrls": ["https://virtual.optimism.rpc.tenderly.co/977f39f0-6cfc-474d-a237-835f1e475ff1"]
+            "rpcUrls": ["https://optimism.gateway.tenderly.co", "https://1rpc.io/op", "https://optimism.drpc.org", "https://op-pokt.nodies.app"]
         },
         "11155111": {
             "rpcUrls": ["https://sepolia.drpc.org", "https://rpc.sepolia.org", "https://sepolia.infura.io/v3/2a219563d6f8480db0e2ce66bcd8f29e", "https://eth-sepolia.public.blastapi.io"]
@@ -190,8 +180,8 @@
             "address": "https://polygonscan.com/address/{{addr}}"
         },
         "10": {
-            "tx": "https://dashboard.tenderly.co/explorer/vnet/977f39f0-6cfc-474d-a237-835f1e475ff1/tx/{{hash}}",
-            "address": "https://optimistic.etherscan.io/address/{{addr}}"
+            "tx": "https://optimism.blockscout.com/tx/{{hash}}",
+            "address": "https://optimism.blockscout.com/address/{{addr}}"
         },
         "11155111": {
             "tx": "https://sepolia.etherscan.io/tx/{{hash}}",
@@ -242,8 +232,7 @@
         "USDT-devnet": "https://staging--zkbob.netlify.app",
         "USDT-nile": "https://staging--zkbob.netlify.app",
         "USDT-nile-guard": "https://staging--zkbob.netlify.app",
-        "USDT-tron": "https://tron.zkbob.com",
-        "USDC-op-tenderly": "https://app.zkbob.com"
+        "USDT-tron": "https://tron.zkbob.com"
     },
 
     "migrations": {
@@ -271,15 +260,6 @@
             }
         },
         "USDC-optimism": {
-            "oldTokens": {
-                "BOB": {
-                    "tokenAddress": "0xb0b195aefa3650a6908f15cdac7d92f8a5791b0b",
-                    "firstTimestamp": 0,
-                    "lastTimestamp": 1696854269
-                }
-            }
-        },
-        "USDC-op-tenderly": {
             "oldTokens": {
                 "BOB": {
                     "tokenAddress": "0xb0b195aefa3650a6908f15cdac7d92f8a5791b0b",
