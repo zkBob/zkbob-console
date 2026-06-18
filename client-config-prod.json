@@ -1,5 +1,5 @@
 {
-    "defaultPool": "USDC-polygon",
+    "defaultPool": "USDC-optimism",
     "pools": {
         "USDC-polygon": {
             "chainId": 137,
@@ -13,13 +13,14 @@
             "ddSubgraph": "zkbob-usdc-polygon"
         },
 	    "USDC-optimism": {
-    	    "chainId": 10,
-    	    "poolAddress": "0x1CA8C2B9B20E18e86d5b9a72370fC6c91814c97C",
-    	    "tokenAddress": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
-    	    "relayerUrls": ["https://relayer-optimism.zkbob.com/"],
+            "chainId": 10,
+            "poolAddress": "0x1CA8C2B9B20E18e86d5b9a72370fC6c91814c97C",
+            "tokenAddress": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+            "proxyUrls": ["https://proxy1.zkbob.com", "https://proxy2.zkbob.com"],
+            "delegatedProverUrls": [],
+            "coldStorageConfigPath": "",
             "feeDecimals": 2,
-            "depositScheme": "usdc",
-            "ddSubgraph": "zkbob-bob-optimism"
+            "depositScheme": "usdc"
         },
         "WETH-optimism": {
     	    "chainId": 10,
