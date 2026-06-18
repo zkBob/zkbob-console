@@ -17,6 +17,9 @@
   "parcelIgnore": [
     "env.js"
   ],
+  "resolutions": {
+    "eth-sig-util/ethereumjs-abi": "0.6.8"
+  },
   "dependencies": {
     "@ribpay/qr-code-generator": "^1.0.6",
     "@truffle/hdwallet-provider": "2.1.13",
